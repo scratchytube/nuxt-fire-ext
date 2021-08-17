@@ -7,6 +7,9 @@
         <p class="snippet">
           {{ product.snippet }}
         </p>
+        <RentModal
+          :product="product"
+        />
       </div>
     </div>
     <div class="whats-included-container">
@@ -32,9 +35,10 @@
         {{ product.description }}
       </p>
     </div>
+    <Reviews />
   </div>
   <div v-else class="container padding">
-    "Page no find!"
+    <PageNoFound />
   </div>
 </template>
 
